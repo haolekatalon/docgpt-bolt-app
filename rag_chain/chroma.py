@@ -31,7 +31,6 @@ if __name__ == "__main__":
     # Crawl the documents and load into Chroma
     urls = get_urls_from_sitemap('https://docs.katalon.com/sitemap.xml', ['https://docs.katalon.com/katalon-studio', 'https://docs.katalon.com/katalon-platform'])
     docs = []
-    print('Crawling')
     for url in urls:
         print(url)
         docs += get_markdown_doc_from_url(url)
